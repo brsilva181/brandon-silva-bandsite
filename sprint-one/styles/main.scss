@@ -1,0 +1,404 @@
+@use '../styles/partials/mixins' as *;
+@use '../styles/partials/typography' as *;
+@use '../styles/partials/variables' as *;
+
+// General
+
+*{
+    margin: 0;
+}
+h1{
+    font-weight: normal;
+}
+
+// Navbar
+
+.navbar{
+    background-color: $primary-black;
+    height: 5rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column; 
+    align-items: space-evenly;
+    font-family: $font-stack;
+
+    @include tablet{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__logo{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    @include tablet{
+        padding-bottom: 1rem;
+        padding-left: $tblt-component-padding;
+    }
+    
+    @include desktop{
+        padding-left: $dktp-component-padding;
+    }
+
+}
+
+    &__image{
+    width: 7rem;
+}
+    &__list{
+        list-style-type: none;
+        display: flex;
+        height: 2rem;
+        padding-left: 0px;
+        width: 100vw;
+        margin-top: 1rem;
+        color: $primary-white;
+
+        @include tablet{
+            margin: 0;
+        }
+
+
+        &--active{
+            border-bottom-style: solid;
+            width: 50vw;
+            text-align: center;
+
+            @include tablet{
+                width: fit-content;
+                margin-left: 4.5rem;
+                padding-bottom: 3.25rem;
+            }
+        }
+
+        &--gray{
+            width: 50vw;
+            text-align: center;
+            color: $primary-silver;
+
+            @include tablet{
+                width: fit-content;
+                margin-left: 4.5rem;
+            }
+        }
+    }
+}
+
+// Hero
+
+.hero{
+    height: 11.43rem;
+    width: 100%;
+    background-image: url(../assets/images/hero-bio.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include tablet{
+        height: 60vh;
+    }
+
+    &__text{
+        @include mbl-page-header;
+        color:$primary-white;
+        padding-left: 1rem;
+
+        @include tablet{
+            padding-left: $tblt-component-padding;
+            @include tblt-page-header;
+        }
+
+        @include desktop{
+            padding-left: $dktp-component-padding;
+        }
+    }
+
+    &__opacity{
+        position: absolute;
+        height: 11.43rem;
+        width: 100%;
+        background-color: rgba(32, 32, 32, 0.5);
+        display: flex;
+        align-items: center;
+
+        @include tablet{
+            height: 60vh;
+        }
+    }
+}
+
+// About Section
+
+.about {
+    max-width: 100vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+
+    @include tablet{
+        padding: 0rem 2.25rem;
+    }
+
+    &__title {
+        padding: $mbl-headline-padding;
+        @include mbl-page-header;
+
+        @include tablet{
+            @include tblt-section-header;
+            padding: $tblt-headline-padding;
+        }
+
+        @include desktop{
+            padding-left: $dktp-component-padding;
+        }
+    }
+
+    &__img{
+        max-width: 100%;
+        max-height: 10%;
+        width: 100%;
+
+        @include tablet{
+            box-sizing: border-box;
+            padding: 0rem 3rem;
+            height: auto;
+        }
+        @include desktop{
+            padding: 0rem 12rem;
+        }
+    }
+
+    &__quote{
+        @include mbl-subheader;
+        padding-top: $mbl-component-padding;
+
+        @include tablet{
+            @include tblt-subheader;
+            padding: 2.25rem 3rem 0rem 3rem;
+        }
+
+        @include desktop{
+            padding-right: 12rem;
+            padding-left: 12rem;
+        }
+        
+        &--name{
+            @include mbl-subheader;
+            padding-top: $mbl-component-padding;
+
+            @include tablet{
+                font-size: 1rem;
+                padding: 1rem 3rem 0rem 3rem;
+                font-weight: normal;
+            }
+            @include desktop{
+                padding-left: 12rem;
+            }
+        }
+    }
+
+    &__subheader{
+        @include mbl-subheader;
+        padding: $mbl-headline-padding;
+
+        @include tablet{
+            @include tblt-subheader;
+            padding: 3rem 3rem 2.25rem 3rem;
+        }
+
+        @include desktop{
+            padding-left: 12rem;
+        }
+    }
+
+    &__paragraphs{
+        @include mbl-body-copy;
+
+        @include tablet{
+            @include tblt-body-copy;
+            display: flex;
+            padding: 0rem 3rem;
+        }
+
+        @include desktop{
+            padding: 0rem 12rem;
+        }
+
+        &--text{
+            padding-bottom: $mbl-component-padding;
+
+            @include tablet{
+                padding-right: 1rem;
+                padding-bottom: $tblt-component-padding;
+            }
+        }
+    }
+}
+
+// Gallery
+
+.gallery{
+    background-color: $secondary-white;
+
+    &__container{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0rem 1rem;
+
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-right: 0rem;
+        }
+    }
+
+    &__title{
+        padding: $mbl-headline-padding;
+        @include mbl-page-header;
+        padding-left: $mbl-component-padding;
+
+        @include tablet{
+            @include tblt-section-header;
+            padding: $tblt-headline-padding;
+            padding-left: $tblt-component-padding;
+        }
+
+        @include desktop{
+            padding-left: $dktp-component-padding;
+        }
+    }
+
+    &__image{
+        padding-bottom: $mbl-component-padding;
+        max-width: 100%;
+        max-height: 15%;
+        width: 100%;
+
+        @include tablet{
+            width: 27vw;
+            padding-right: 1.5rem;
+            padding-bottom: $tblt-component-padding;
+        }
+    }
+}
+
+// Footer
+
+.footer{
+    background-color: $primary-black;
+
+    &__container-1{
+        padding: 0rem 1rem;
+
+        @include tablet{
+            display: flex;
+            padding: 0rem 2.25rem
+        }
+
+        @include desktop{
+            padding: 0rem 6.5rem;
+        }
+    }
+
+    &__title{
+        padding: $mbl-headline-padding;
+        @include mbl-page-header;
+        color: $primary-white;
+
+        @include tablet{
+            @include tblt-section-header;
+            padding: $tblt-headline-padding;
+            padding-right: $tblt-component-padding;
+        }
+    }
+
+    &__icon{
+        padding-right: 2.25rem;
+        padding-bottom: 1rem;
+        padding-top: 2.3rem;
+
+    }
+
+    &__logo-1{
+        display: none;
+
+        @include tablet{
+            display: inline-flex;
+            margin-left: auto;
+            padding-top: 1rem;
+        }
+    }
+
+    &__container-2{
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            padding: 0rem 2.25rem;
+        }
+        @include desktop {
+            padding: 0rem 6.5rem;
+            justify-content: flex-start;
+        }
+    }
+    
+    &__info{
+        padding-bottom: .5rem;
+        padding-left: $mbl-component-padding;
+        
+        @include tablet{
+            padding: 0rem;
+        }
+
+        @include desktop{
+            padding-right: 3.5rem;
+        }
+
+        &--name{
+            @include mbl-footer-title;
+            color: $primary-white;
+            padding-bottom: $mbl-component-padding;
+
+            @include tablet{
+                @include tblt-footer-copy;
+            }
+        }
+
+        &--text{
+            @include mbl-body-copy;
+            padding-bottom: $mbl-component-padding;
+            color: $secondary-white;
+
+            @include tablet{
+                @include tblt-footer-copy;
+            }
+        }
+    }
+
+    &__logo-2{
+        padding-top: 3rem;
+        padding-bottom: $mbl-component-padding;
+        padding-left: $mbl-component-padding;
+
+        @include tablet{
+            display: none;
+        }
+    }
+
+    &__copyright{
+        @include mbl-label;
+        color: $secondary-white;
+        padding-left: $mbl-component-padding;
+
+        @include tablet{
+            @include tblt-footer-copy;
+            padding: $tblt-component-padding;
+        }
+
+        @include desktop{
+            padding-left: $dktp-component-padding;
+        }
+    }
+}

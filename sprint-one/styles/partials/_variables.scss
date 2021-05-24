@@ -1,0 +1,27 @@
+@use './typography';
+
+// Fonts
+$font-stack: "Avenir", sans-serif;
+$font-stack-demi: "Avenir-demi", sans-serif;
+$font-stack-bold: "Avenir-bold", sans-serif;
+
+// Breakpoints
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+// Colors
+$primary-black: #323232;
+$primary-silver: #afafaf;
+$primary-white: #ffffff;
+$secondary-black: #000000;
+$secondary-silver: #e1e1e1;
+$secondary-white: #fafafa;
+
+// Padding
+$mbl-headline-padding: 1.5rem 0rem 1rem 0rem;
+$mbl-component-padding: 1rem;
+
+$tblt-headline-padding: 3rem 0rem 2.25rem 0rem;
+$tblt-component-padding: 2.25rem;
+
+$dktp-component-padding: 6.5rem;
