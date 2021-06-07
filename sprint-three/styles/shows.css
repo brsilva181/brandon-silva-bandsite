@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: "Avenir-demi";
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
+}
+@font-face {
+  font-family: "Avenir-bold";
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
+}
+.hero {
+  height: 17rem;
+  width: 100%;
+  background-image: url(../assets/images/hero-shows.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+}
+.hero__subtext {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "Avenir-demi", sans-serif;
+  padding: 1.5rem 0rem 1rem 0rem;
+  padding-left: 1rem;
+}
+.hero__text {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Avenir-bold", sans-serif;
+  color: #ffffff;
+  padding-left: 1rem;
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__text {
+    padding-left: 2.25rem;
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__text {
+    padding-left: 6.5rem;
+  }
+}
+.hero__iframe {
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+.hero__opacity {
+  position: absolute;
+  height: 17rem;
+  width: 100%;
+  background-color: rgba(32, 32, 32, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .hero__opacity {
+    height: 60vh;
+  }
+}
+
+.shows {
+  background-color: #ffffff;
+  padding: 0rem 1rem;
+}
+.shows__title {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Avenir-bold", sans-serif;
+  padding: 1.5rem 0rem 1rem 0rem;
+}
+.shows__card {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.shows__card--header {
+  font-size: 10px;
+  line-height: 18px;
+  font-family: "Avenir", sans-serif;
+  color: #afafaf;
+  font-weight: 600;
+  padding-bottom: 0.1rem;
+}
+.shows__card--info {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Avenir", sans-serif;
+  padding-bottom: 1rem;
+}
+.shows__card--button {
+  width: 100%;
+  padding: 0.5rem 0rem;
+  background-color: #323232;
+  border-radius: 5px;
+  color: #ffffff;
+}/*# sourceMappingURL=shows.css.map */

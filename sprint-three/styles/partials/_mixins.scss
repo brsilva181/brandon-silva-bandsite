@@ -1,0 +1,69 @@
+@use './typography' as *;
+@use './variables' as *;
+
+// Media Queries
+@mixin tablet{
+    @media screen and (min-width: $tablet-breakpoint){
+        @content;
+    }
+}
+@mixin desktop{
+    @media screen and (min-width: $desktop-breakpoint){
+        @content;
+    }
+}
+
+// Mobile Text Styles
+@mixin mbl-page-header{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: $font-stack-bold;
+}
+@mixin mbl-subheader{
+    font-size: 14px;
+    line-height: 22px;
+    font-family: $font-stack-demi;
+}
+@mixin mbl-body-copy{
+    font-size: 13px;
+    line-height: 18px;
+    font-family: $font-stack;
+}
+@mixin mbl-footer-title {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: $font-stack-demi;
+}
+@mixin mbl-label{
+    font-size: 10px;
+    line-height: 18px;
+    font-family: $font-stack;
+}
+
+// Tablet & Desktop Text Styles
+@mixin tblt-page-header{
+    font-size: 60px;
+    line-height: 68px;
+}
+@mixin tblt-section-header{
+    font-size: 36px;
+    line-height: 44px;
+}
+@mixin tblt-subheader{
+    font-size: 24px;
+    line-height: 32px;
+}
+@mixin tblt-body-copy{
+    font-size: 14px;
+    line-height: 22px;
+}
+@mixin tblt-footer-copy{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@mixin tblt-label{
+    font-size: 12px;
+    line-height: 20px;
+    font-family: $font-stack-bold;
+}

@@ -1,0 +1,93 @@
+@use '../styles/partials/mixins' as *;
+@use '../styles/partials/typography' as *;
+@use '../styles/partials/variables' as *;
+
+// Hero
+
+.hero{
+    height: 17rem;
+    width: 100%;
+    background-image: url(../assets/images/hero-shows.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include tablet{
+        height: 60vh;
+    }
+
+    &__subtext{
+        color: $primary-white;
+        @include mbl-subheader;
+        padding: $mbl-headline-padding;
+        padding-left: $mbl-component-padding; 
+    }
+    &__text{
+        @include mbl-page-header;
+        color:$primary-white;
+        padding-left: $mbl-component-padding;
+        padding-bottom: 1.5rem;
+
+        @include tablet{
+            padding-left: $tblt-component-padding;
+            @include tblt-page-header;
+        }
+
+        @include desktop{
+            padding-left: $dktp-component-padding;
+        }
+    }
+
+    &__iframe{
+        box-sizing: border-box;
+        padding: 0 1rem;
+    }
+    &__opacity{
+        position: absolute;
+        height: 17rem;
+        width: 100%;
+        background-color: rgba(32, 32, 32, 0.5);
+        display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            height: 60vh;
+        }
+    }
+}
+
+.shows{
+    background-color: $primary-white;
+    padding: 0rem 1rem;
+
+    &__title{
+        @include mbl-page-header;
+        padding: $mbl-headline-padding;
+    }
+
+    &__card{
+        border-bottom: 1px solid $secondary-silver;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+
+        &--header{
+            @include mbl-label;
+            color: $primary-silver;
+            font-weight: 600;
+            padding-bottom: .1rem;
+        }
+
+        &--info{
+            @include mbl-body-copy;
+            padding-bottom: 1rem;
+        }
+
+        &--button{
+            width: 100%;
+            padding: .5rem 0rem;
+            background-color: $primary-black;
+            border-radius: 5px;
+            color: $primary-white;
+        }
+    }
+}
